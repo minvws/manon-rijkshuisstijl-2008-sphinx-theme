@@ -1,0 +1,21 @@
+:root {
+  --breadcrumb-bar-background-color: #fff;
+  --breadcrumb-bar-text-color: #000000;
+  --breadcrumb-bar-link-text-color: #000000;
+  --breadcrumb-bar-icon-text-color: #000000;
+  --breadcrumb-bar-icon-font-size: 0.8rem;
+
+  --breadcrumb-bar-hover-text-color: #000000;
+}
+
+.div-main-content:has(.breadcrumb-bar) {
+  padding-top: 0;
+
+  .breadcrumb-bar {
+    margin-left: -1.5rem; /* margin-left on main content */
+
+    li:first-child a {
+      text-decoration: none;
+    }
+  }
+}

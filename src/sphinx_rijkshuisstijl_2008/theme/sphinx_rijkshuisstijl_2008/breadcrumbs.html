@@ -1,0 +1,13 @@
+<nav class="breadcrumb-bar">
+  <div>
+    <ul>
+      {%- block breadcrumbs %}
+        <li><a href="{{ theme_home_url }}" class="icon icon-home" aria-label="Home"></a></li>
+      {%- for doc in parents %}
+        <li><a href="{{ doc.link|e }}">{{ doc.title }}</a></li>
+      {%- endfor %}
+        <li><a href="{{ pathto(pagename) }}" aria-current="page">{{ title }}</a></li>
+      {%- endblock %}
+    </ul>
+  </div>
+</nav>

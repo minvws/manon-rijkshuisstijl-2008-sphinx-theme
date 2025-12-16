@@ -1,0 +1,30 @@
+.sidemenu > nav {
+  --sidemenu-nav-padding-top: 0;
+  --sidemenu-nav-padding-right: 0;
+  --sidemenu-nav-padding-bottom: 0;
+  --sidemenu-nav-padding-left: 0;
+
+  > div {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding: 1rem;
+    max-height: var(--sidemenu-main-max-height);
+    overflow: auto;
+    /* Solves a bug in older safari versions where position sticky blocks overflow auto */
+    display: block;
+
+    > ul {
+      padding: 0;
+
+      a {
+        display: inline-block;
+        line-height: 1;
+      }
+    }
+
+    p.caption {
+      margin-top: 1rem;
+    }
+  }
+}
