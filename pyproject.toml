@@ -41,8 +41,8 @@ sphinx_rijkshuisstijl_2008 = [
   "theme/sphinx_rijkshuisstijl_2008/static/css/*.css",
   "theme/sphinx_rijkshuisstijl_2008/static/js/*.js",
   "theme/sphinx_rijkshuisstijl_2008/static/fonts/**/*",
-  "theme/sphinx_rijkshuisstijl_2008/static/img/*",
-
+  "theme/sphinx_rijkshuisstijl_2008/static/icons/*",
+  "theme/sphinx_rijkshuisstijl_2008/static/images/*",
   # Optional templates folder
   "theme/sphinx_rijkshuisstijl_2008/templates/**/*"
 ]

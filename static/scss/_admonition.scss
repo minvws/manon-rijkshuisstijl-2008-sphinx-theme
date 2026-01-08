@@ -1,21 +1,12 @@
-@use "@minvws/manon/notification";
-@use "@minvws/manon/notification-block-element";
-@use "@minvws/manon/mixins/notification-type";
-@use "@minvws/manon/notification-error";
-@use "@minvws/manon/notification-warning";
-@use "@minvws/manon/notification-explanation";
-@use "@minvws/manon/notification-confirmation";
-@use "@minvws/manon/notification-system-message";
+@use "@minvws/manon/components/notification";
 
 /* This file uses mixins from Manon (https://github.com/minvws/nl-rdo-manon) */
 
 .admonition {
   @include notification.notification;
-  // Block notification can be included after manon release.
-  @include notification-block-element.block-notification;
 
   .admonition-title {
-    font-weight: var(--notification-span-font-weight);
+    //font-weight: var(--notification-span-font-weight);
   }
 
   &.informative,
@@ -24,10 +15,9 @@
   &.note,
   &.seealso {
     @include notification.notification;
-    @include notification-type.notification-type("explanation");
 
     .admonition-title {
-      font-weight: var(--notification-span-font-weight);
+      //font-weight: var(--notification-span-font-weight);
     }
   }
 
@@ -36,10 +26,9 @@
   &.attention,
   &.danger {
     @include notification.notification;
-    @include notification-type.notification-type("warning");
 
     .admonition-title {
-      font-weight: var(--notification-span-font-weight);
+      //font-weight: var(--notification-span-font-weight);
     }
   }
 }
