@@ -1,10 +1,11 @@
 import os
 from importlib.metadata import version
+
 from sphinx.application import Sphinx
+
 from sphinx_rijkshuisstijl_2008.translator import CustomHTMLTranslator
 
-
-__version__ = version("sphinx-rijkshuisstijl-2008")
+__version__ = version("sphinx-rijkshuisstijl-2008-theme")
 
 
 def setup(app: Sphinx):

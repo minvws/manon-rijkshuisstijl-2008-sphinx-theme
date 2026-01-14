@@ -1,13 +1,7 @@
 @use "@minvws/manon/components/notification";
 
-/* This file uses mixins from Manon (https://github.com/minvws/nl-rdo-manon) */
-
 .admonition {
   @include notification.notification;
-
-  .admonition-title {
-    //font-weight: var(--notification-span-font-weight);
-  }
 
   &.informative,
   &.hint,
@@ -15,10 +9,7 @@
   &.note,
   &.seealso {
     @include notification.notification;
-
-    .admonition-title {
-      //font-weight: var(--notification-span-font-weight);
-    }
+    @include notification.notification-explanation;
   }
 
   &.caution,
@@ -26,9 +17,6 @@
   &.attention,
   &.danger {
     @include notification.notification;
-
-    .admonition-title {
-      //font-weight: var(--notification-span-font-weight);
-    }
+    @include notification.notification-warning;
   }
 }

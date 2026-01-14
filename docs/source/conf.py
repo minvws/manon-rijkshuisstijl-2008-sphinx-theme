@@ -39,13 +39,13 @@ extensions = [
     "sphinxcontrib.autodoc_pydantic",
     # When developing locally, and using:
     #
-    #   html_theme_path = ["../../src/manon_rijkshuisstijl_2008/theme"]
+    #   html_theme_path = ["../../src/sphinx_rijkshuisstijl_2008/theme"]
     #
     # Sphinx will use that local folder and won't import the
     # manon_rijkshuisstijl_2008 package, so the package setup() will not
     # run. For local testing we can add the package to the extensions as a
     # workaround.
-    "manon_rijkshuisstijl_2008",
+    "sphinx_rijkshuisstijl_2008",
 ]
 
 myst_enable_extensions = [
@@ -63,7 +63,10 @@ extlinks = {
         "https://github.com/minvws/manon-rijkshuisstijl-2008-sphinx-theme/tree/%s",
         "%s",
     ),
-    "bug": ("https://github.com/minvws/manon-rijkshuisstijl-2008-sphinx-theme/issues/%s", "#%s"),
+    "bug": (
+        "https://github.com/minvws/manon-rijkshuisstijl-2008-sphinx-theme/issues/%s",
+        "#%s",
+    ),
     "feature": (
         "https://github.com/minvws/manon-rijkshuisstijl-2008-sphinx-theme/issues/%s",
         "#%s",
@@ -83,8 +86,8 @@ templates_path = ["_templates"]
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
 # -- Theme and options for HTML output ---------------------------------------
-html_theme_path = ["../../src/manon_rijkshuisstijl_2008/theme"]
-html_theme = "manon_rijkshuisstijl_2008"
+html_theme_path = ["../../src/sphinx_rijkshuisstijl_2008/theme"]
+html_theme = "sphinx_rijkshuisstijl_2008"
 
 
 locale_dirs = ["locales/"]

@@ -1,4 +1,4 @@
-# Sphinx iCore Open Theme
+# Sphinx Rijkshuistijl 2008 Theme
 
 A visually clean, responsive, and configurable theme for
 [Sphinx](https://www.sphinx-doc.org), built with the
@@ -33,5 +33,6 @@ html_theme = "sphinx_rijkshuisstijl_2008"
 
 This theme follows the [REUSE Specification v3.2](https://reuse.software/spec/).
 Please see [REUSE.toml](./REUSE.toml), [LICENSES/](./LICENSES/) and the
-individual `*.license` files for copyright and license information.
-The Rijkslogo and Rijkshuisstijl are subject to specific [terms of use](./LICENSES/LicenseRef-Rijkshuisstijl.txt).
+individual `*.license` files for copyright and license information. The
+Rijkslogo and Rijkshuisstijl are subject to specific
+[terms of use](./LICENSES/LicenseRef-Rijkshuisstijl.txt).

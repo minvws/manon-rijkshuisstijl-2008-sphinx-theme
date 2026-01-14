@@ -1,1 +1,15 @@
-@use "@minvws/manon-themes/rijkshuisstijl-2008";
+@use "@minvws/manon-themes/rijkshuisstijl-2008" with (
+  $font-path: "/_static/fonts",
+  $icons-path: "/_static/img/icons"
+);
+
+@use "@minvws/manon/components/bundles/all";
+
+@use "admonition";
+@use "header-link";
+@use "highlight";
+@use "pagination";
+@use "pre";
+@use "print";
+@use "visually-grouped";
+

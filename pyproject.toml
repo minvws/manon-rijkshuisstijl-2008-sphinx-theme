@@ -1,5 +1,5 @@
 [project]
-name = "sphinx-rijkshuisstijl-2008"
+name = "sphinx-rijkshuisstijl-2008-theme"
 description = "Sphinx theme for the Rijkshuisstijl 2008 theme"
 dynamic = ["version"]
 readme = "README.md"
@@ -8,7 +8,7 @@ dependencies = [
     "Sphinx==8.2.3",
 ]
 
-[project.optional-dependencies]
+[dependency-groups]
 dev = [
   "myst-parser==4.0.1",
   "sphinx-autobuild==2025.8.25",
@@ -41,8 +41,8 @@ sphinx_rijkshuisstijl_2008 = [
   "theme/sphinx_rijkshuisstijl_2008/static/css/*.css",
   "theme/sphinx_rijkshuisstijl_2008/static/js/*.js",
   "theme/sphinx_rijkshuisstijl_2008/static/fonts/**/*",
-  "theme/sphinx_rijkshuisstijl_2008/static/icons/*",
-  "theme/sphinx_rijkshuisstijl_2008/static/images/*",
+  "theme/sphinx_rijkshuisstijl_2008/static/img/**/*",
+
   # Optional templates folder
   "theme/sphinx_rijkshuisstijl_2008/templates/**/*"
 ]

@@ -3,15 +3,15 @@
 {% set title = _('Search') %}
 
 {%- block scripts %}
-    {{ super() }}
-    <script src="{{ pathto('_static/searchtools.js', 1) }}"></script>
-    <script src="{{ pathto('_static/language_data.js', 1) }}"></script>
+  {{ super() }}
+  <script src="{{ pathto('_static/searchtools.js', 1) }}"></script>
+  <script src="{{ pathto('_static/language_data.js', 1) }}"></script>
 {%- endblock %}
 
 {% block extrahead %}
-    <script src="{{ pathto('searchindex.js', 1) }}" defer="defer"></script>
-    <meta name="robots" content="noindex" />
-    {{ super() }}
+  <script src="{{ pathto('searchindex.js', 1) }}" defer="defer"></script>
+  <meta name="robots" content="noindex" />
+  {{ super() }}
 {% endblock %}
 
 {% block body %}
