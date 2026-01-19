@@ -38,52 +38,48 @@ next %} {%- set divlayout = "column-2" %} {%- elif next %} {%- set divlayout =
 "singlehtml" %} {%- set searchformaction = pathto('search') %} {%- else %} {%-
 set searchformaction = "" %} {%- endif %}
 <header class="page-header">
+  <a href="/" class="logo Rijksoverheid">
+    <img src="{{ theme_logo|e }}" alt="{{ shorttitle|e }}" />
+    Rijksoverheid
+  </a>
   <nav aria-label="{{ _('Main Navigation') }}" class="collapsible">
-    <a href="/" class="logo">
-      <img src="{{ theme_logo|e }}" alt="{{ shorttitle|e }}" />
-    </a>
-
     <div class="collapsing-element">
       <ul>
         <li><a href="/">{{ _('Home') }}</a></li>
       </ul>
-      <div>
-        <form
-          name="header_search"
-          class="inline"
-          action="{{ searchformaction }}"
-          method="get"
-        >
-          <div>
-            <div class="combined-field">
-              <input
-                type="text"
-                name="q"
-                placeholder="{{ _('Search') }}"
-                aria-labelledby="searchlabel"
-                autocomplete="off"
-                autocapitalize="off"
-                spellcheck="false"
-              />
-              <button type="submit">
-                <span class="icon icon-search" aria-hidden="true"></span>
-                <span class="visually-hidden">{{ _('Search') }}</span>
-              </button>
-            </div>
-          </div>
-        </form>
-      </div>
+      <form
+        name="header_search"
+        class="inline"
+        action="{{ searchformaction }}"
+        method="get"
+      >
+        <div class="combined-field">
+          <input
+            type="text"
+            name="q"
+            placeholder="{{ _('Search') }}"
+            aria-labelledby="searchlabel"
+            autocomplete="off"
+            autocapitalize="off"
+            spellcheck="false"
+          />
+          <button type="submit">
+            <span class="icon icon-search" aria-hidden="true"></span>
+            <span class="visually-hidden">{{ _('Search') }}</span>
+          </button>
+        </div>
+      </form>
     </div>
   </nav>
 </header>
 {% endblock %} {% block content %}
 <main class="sidemenu">
   {{ manon_sidebar() }}
-  <div class="visually-grouped">
+  <article>
     {% block body %} {% endblock %} {%- block relbar_bottom %} {%- if
     theme_show_relbar_bottom|tobool %} {{- rellink_markup () }} {%- endif %} {%
     endblock %}
-  </div>
+  </article>
 </main>
 {% endblock %} {% block footer %}
 <footer>
