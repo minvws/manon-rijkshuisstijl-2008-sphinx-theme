@@ -38,8 +38,8 @@ variable, set in `conf.py` alongside the rest, e.g.:
 html_theme_options = {
     "description": "Manon Sphinx theme",
     "github_user": "minvws",
-    "github_repo": "manon-icore-open-sphinx-theme",
-    "tidelift_url": "https://github.com/minvws/manon-icore-open-sphinx-theme",
+    "github_repo": "manon-rijkshuisstijl-2008-sphinx-theme",
+    "tidelift_url": "https://github.com/minvws/manon-rijkshuisstijl-2008-sphinx-theme",
 }
 ```
 
