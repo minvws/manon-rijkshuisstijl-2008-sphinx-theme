@@ -1,0 +1,54 @@
+[project]
+name = "sphinx-rijkshuisstijl-2008-theme"
+description = "Sphinx theme for the Rijkshuisstijl 2008 theme"
+dynamic = ["version"]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "Sphinx==8.2.3",
+]
+
+[dependency-groups]
+dev = [
+  "myst-parser==4.0.1",
+  "sphinx-autobuild==2025.8.25",
+  "sphinxcontrib-mermaid==1.0.0",
+  "autodoc_pydantic==2.2.0",
+]
+
+[project.entry-points]
+"sphinx.html_themes" = { sphinx_rijkshuisstijl_2008 = "sphinx_rijkshuisstijl_2008" }
+
+[build-system]
+requires = ["setuptools>=80", "setuptools_scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+local_scheme = "no-local-version"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+exclude = ["docs*"]
+
+[tool.setuptools.package-data]
+sphinx_rijkshuisstijl_2008 = [
+  # Theme templates
+  "theme/sphinx_rijkshuisstijl_2008/layout.html",
+  "theme/sphinx_rijkshuisstijl_2008/search.html",
+  "theme/sphinx_rijkshuisstijl_2008/theme.conf",
+
+  # Static files
+  "theme/sphinx_rijkshuisstijl_2008/static/css/*.css",
+  "theme/sphinx_rijkshuisstijl_2008/static/js/*.js",
+  "theme/sphinx_rijkshuisstijl_2008/static/fonts/**/*",
+  "theme/sphinx_rijkshuisstijl_2008/static/img/**/*",
+
+  # Optional templates folder
+  "theme/sphinx_rijkshuisstijl_2008/templates/**/*"
+]
+
+[tool.setuptools.exclude-package-data]
+sphinx_rijkshuisstijl_2008 = [
+  "__pycache__/*",
+  "*.py[cod]"
+]
