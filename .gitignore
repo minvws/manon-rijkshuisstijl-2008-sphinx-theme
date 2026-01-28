@@ -16,3 +16,6 @@ __pycache__/
 *.egg
 .DS_Store
 .secrets
+
+# Generated files
+src/sphinx_rijkshuisstijl_2008/theme/sphinx_rijkshuisstijl_2008/static/

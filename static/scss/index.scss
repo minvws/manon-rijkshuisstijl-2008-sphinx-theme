@@ -11,17 +11,3 @@
 @use "pagination";
 @use "pre";
 @use "print";
-
-main.sidemenu article > section {
-  padding: 1.75rem;
-}
-
-.related {
-  .previous .icon {
-    margin-right: 0.5rem;
-  }
-
-  .next .icon {
-    margin-left: 0.5rem;
-  }
-}
