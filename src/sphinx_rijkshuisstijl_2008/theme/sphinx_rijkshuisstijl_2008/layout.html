@@ -1,31 +1,26 @@
-{# Sphinx layout template for the manon theme. #}
-{%- extends "basic/layout.html" %}
+{# Sphinx layout template for the manon theme. #} {%- extends
+"basic/layout.html" %}
 
 <!-- extra head -->
-{%- block extrahead %}
-{{ super() }}
-<link rel="stylesheet" href="{{ pathto('_static/custom.css', resource=True) }}" type="text/css" />
+{%- block extrahead %} {{ super() }}
+<link
+  rel="stylesheet"
+  href="{{ pathto('_static/custom.css', resource=True) }}"
+  type="text/css"
+/>
 {% endblock %}
 
 <!-- sidebar -->
-{%- macro manon_sidebar() %}
-{%- block sidebartoc %}
+{%- macro manon_sidebar() %} {%- block sidebartoc %}
 <nav aria-label="{{ _('Sidebar') }}">
   <div class="sticky-container">{{ toctree(includehidden=True) }}</div>
 </nav>
-{%- endblock %}
-{% endmacro %}
+{%- endblock %} {% endmacro %}
 
 <!-- relbar -->
-{%- macro rellink_markup() %}
-
-{%- if prev and next %}
-  {%- set divlayout = "column-2" %}
-{%- elif next %}
-  {%- set divlayout = "next" %}
-{%- else %}
-  {%- set divlayout = "" %}
-{%- endif %}
+{%- macro rellink_markup() %} {%- if prev and next %} {%- set divlayout =
+"column-2" %} {%- elif next %} {%- set divlayout = "next" %} {%- else %} {%- set
+divlayout = "" %} {%- endif %}
 
 <section id="relbar" class="related {{ divlayout }}">
   <nav id="rellinks" class="pagination" aria-label="{{ _('Pagination') }}">
@@ -51,12 +46,9 @@
 {%- endmacro %}
 
 <!-- header -->
-{% block header %}
-{%- if pagename != "search" and builder != "singlehtml" %}
-  {%- set searchformaction = pathto('search') %}
-{%- else %}
-  {%- set searchformaction = "" %}
-{%- endif %}
+{% block header %} {%- if pagename != "search" and builder != "singlehtml" %}
+{%- set searchformaction = pathto('search') %} {%- else %} {%- set
+searchformaction = "" %} {%- endif %}
 
 <header class="page-header">
   <a href="/" class="logo Rijksoverheid">
@@ -99,19 +91,13 @@
 {% block content %}
 <main class="sidemenu">
   {{ manon_sidebar() }}
-  <div class="visually-grouped">
+  <article>
     {% block document %}
-      <div class="content-wrapper">
-        {{ body }}
-      </div>
-    {% endblock %}
-
-    {%- block relbar_bottom %}
-      {%- if theme_show_relbar_bottom|tobool %}
-          {{- rellink_markup () }}
-      {%- endif %}
-    {% endblock %}
-  </div>
+    <div class="content-wrapper">{{ body }}</div>
+    {% endblock %} {%- block relbar_bottom %} {%- if
+    theme_show_relbar_bottom|tobool %} {{- rellink_markup () }} {%- endif %} {%
+    endblock %}
+  </article>
 </main>
 {% endblock %}
 
@@ -127,5 +113,4 @@
 {% endblock %}
 
 <!-- relbar blocks for extensions -->
-{% block relbar1 %}{% endblock %}
-{% block relbar2 %}{% endblock %}
+{% block relbar1 %}{% endblock %} {% block relbar2 %}{% endblock %}
