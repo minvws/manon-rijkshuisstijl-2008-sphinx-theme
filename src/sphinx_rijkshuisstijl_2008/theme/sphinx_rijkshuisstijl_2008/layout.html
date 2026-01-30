@@ -99,7 +99,7 @@
 {% block content %}
 <main class="sidemenu">
   {{ manon_sidebar() }}
-  <div class="visually-grouped">
+  <article>
     {% block document %}
       <div class="content-wrapper">
         {{ body }}
@@ -111,7 +111,7 @@
           {{- rellink_markup () }}
       {%- endif %}
     {% endblock %}
-  </div>
+  </article>
 </main>
 {% endblock %}
 
