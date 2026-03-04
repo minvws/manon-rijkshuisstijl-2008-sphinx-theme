@@ -51,11 +51,11 @@ export default defineConfig({
     viteStaticCopy({
       targets: [
         {
-          src: "node_modules/@minvws/manon-themes/dist/icore-open/fonts/*",
+          src: "node_modules/@minvws/manon-themes/dist/rijkshuisstijl-2008/fonts/*",
           dest: "fonts",
         },
         {
-          src: "node_modules/@minvws/manon-themes/dist/icore-open/img/*",
+          src: "node_modules/@minvws/manon-themes/dist/rijkshuisstijl-2008/img/*",
           dest: "img",
         },
       ],
