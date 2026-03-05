@@ -51,6 +51,10 @@ export default defineConfig({
     viteStaticCopy({
       targets: [
         {
+          src: "static/img/**/*.{png,jpg,jpeg,svg,gif,webp,ico}",
+          dest: "img",
+        },
+        {
           src: "node_modules/@minvws/manon-themes/dist/rijkshuisstijl-2008/fonts/*",
           dest: "fonts",
         },
