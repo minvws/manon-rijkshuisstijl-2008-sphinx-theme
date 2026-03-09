@@ -100,4 +100,7 @@ html_theme_options = {
     "github_user": "minvws",
     "github_repo": "manon-rijkshuisstijl-2008-sphinx-theme",
     "tidelift_url": "https://github.com/minvws/manon-rijkshuisstijl-2008-sphinx-theme",
+    "show_copyright_privacy_block_footer": "true",
+    "copyright_url": "/copyright.html",
+    "privacy_url": "/privacy.html",
 }
