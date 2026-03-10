@@ -37,9 +37,9 @@ variable, set in `conf.py` alongside the rest, e.g.:
 ```python
 html_theme_options = {
     "description": "Manon Sphinx theme",
-    "github_user": "minvws",
-    "github_repo": "manon-rijkshuisstijl-2008-sphinx-theme",
-    "tidelift_url": "https://github.com/minvws/manon-rijkshuisstijl-2008-sphinx-theme",
+    "show_copyright_privacy_block_footer": True,
+    "copyright_url": "/copyright.html",
+    "privacy_url": "/privacy.html",
 }
 ```
 
@@ -47,17 +47,18 @@ html_theme_options = {
 
 Settings related to text display, logo, etc.
 
--`description`: Text blurb about your project, to appear under the
-logo. -`logo`: Relative path (from `$PROJECT/_static/`) to a logo image, which
-will appear in the upper left corner above the name of the project.
+- `description`: Text blurb about your project, to appear under the logo.
+- `logo`: Relative path (from `$PROJECT/_static/`) to a logo image, which will
+  appear in the upper left corner above the name of the project.
 
-### Service links and badges
+### Footer
 
-Third-party services (GitHub) and related badges or banners.
+Settings related to the copyright and privacy information in the footer.
 
--`github_repo`: Used by `github_button` and `github_banner` (see above); does
-nothing if both of those are set to `false`. -`github_user`: Used by
-`github_button` and `github_banner` (see above); does nothing if both of those
-are set to `false`. -`tidelift_url`: Set this to your
-[Tidelift](https://tidelift.com/) project URL if you want a "Professional
-support" section in your sidebar.
+- `show_copyright_privacy_block_footer`: Set this to `true` to show the
+  copyright and privacy information block in the footer.
+- `copyright_url`: Set this to the URL for the copyright page. Defaults to
+  `/copyright.html`.
+- `privacy_url`: Set this to the URL for the privacy page. Defaults to
+  `/privacy.html`.
+
