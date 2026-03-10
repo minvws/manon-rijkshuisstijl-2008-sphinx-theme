@@ -59,14 +59,14 @@
 {%- endif %}
 
 <header class="page-header">
-  <a href="/" class="logo Rijksoverheid">
+  <a href="{{ theme_home_url }}" class="logo Rijksoverheid">
     <img src="{{ theme_logo|e }}" alt="{{ shorttitle|e }}" />
     Rijksoverheid
   </a>
   <nav aria-label="{{ _('Main Navigation') }}" class="collapsible">
     <div class="collapsing-element">
       <ul>
-        <li><a href="/">{{ _('Home') }}</a></li>
+        <li><a href="{{ theme_home_url }}">{{ _('Home') }}</a></li>
       </ul>
       <form
         name="header_search"
