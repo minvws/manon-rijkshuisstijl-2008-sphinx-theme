@@ -20,12 +20,12 @@ extensions = [
 ]
 ```
 
--See `the Sphinx Markdown docs`
-[markdown](https://www.sphinx-doc.org/en/master/usage/markdown.html) for details
-on how this extension behaves. -See
-`the Sphinx Markup to shorten external links`
-[extlinks](https://www.sphinx-doc.org/en/master/usage/extensions/extlinks.html)
-for details on how this extension behaves.
+- See `the Sphinx Markdown docs`
+  [markdown](https://www.sphinx-doc.org/en/master/usage/markdown.html) for
+  details on how this extension behaves.
+- See `the Sphinx Markup to shorten external links`
+  [extlinks](https://www.sphinx-doc.org/en/master/usage/extensions/extlinks.html)
+  for details on how this extension behaves.
 
 ```
 _static-path:
