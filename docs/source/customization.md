@@ -1,64 +1,53 @@
 # Customization
 
-The Manon Sphinx theme behavior & style can be customized in multiple ways:
+The Sphinx Rijkshuisstijl 2008 Theme behavior and style can be customized in
+multiple ways:
 
-- Various template-level or nontrivial-style settings can be configured via your
-  `conf.py` in `html_theme_options`; see :ref:`theme-options`.
-- You can provide your own CSS stylesheet overrides via a
-  :ref:`custom stylesheet <custom-stylesheet>`. This is suitable for changes
-  that only need minor CSS modifications.
-
-```
-_custom-stylesheet:
-```
+- Various template-level settings can be configured via `html_theme_options` in
+  your `conf.py`.
+- You can provide your own CSS stylesheet overrides for minor modifications.
 
 ## Custom stylesheet
 
-If you need to modify the Manon Sphinx theme's default CSS styles in a way not
-covered by the theme options from the next section, you may provide a custom CSS
-stylesheet as follows:
+If you need to modify the default CSS styles in a way not covered by the theme
+options, you can provide a custom CSS stylesheet as follows:
 
-- Create a file named `custom.css` anywhere you prefer (typically `_static/`,
-  but this is solely convention) containing your desired overrides to the CSS
-  found in the Manon Sphinx theme's `static/css/manon_theme.css`.
-- Set the core Sphinx option `html_static_path`
-  [html_static_path](https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_static_path)
-  to either that file's path, or the directory it lives within.
-
-```
-_theme-options:
-```
+1. Create a file named `custom.css` (typically in `_static/`).
+2. Add your desired CSS overrides.
+3. Set the `html_static_path` in `conf.py` to include the directory where
+   `custom.css` is located.
 
 ## Theme options
 
-The Manon Sphinx theme's primary configuration route is the `html_theme_options`
-variable, set in `conf.py` alongside the rest, e.g.:
+The theme's primary configuration route is the `html_theme_options` variable in
+`conf.py`.
 
 ```python
 html_theme_options = {
-    "description": "Manon Sphinx theme",
+    "logo_text": "Project Name",
+    "slogan": "Project Slogan",
     "show_copyright_privacy_block_footer": True,
     "copyright_url": "/copyright.html",
     "privacy_url": "/privacy.html",
+    "home_url": "/",
 }
 ```
 
 ### Basics
 
-Settings related to text display, logo, etc.
+Settings related to text display and logo.
 
-- `description`: Text blurb about your project, to appear under the logo.
-- `logo`: Relative path (from `$PROJECT/_static/`) to a logo image, which will
-  appear in the upper left corner above the name of the project.
+- `logo`: Relative path to a logo image. Defaults to `/_static/img/ro-logo.svg`.
+- `logo_text`: Text to appear next to or under the logo.
+- `slogan`: A project slogan to appear in the footer.
+- `home_url`: URL for the home link in the header. Defaults to `/`.
 
 ### Footer
 
 Settings related to the copyright and privacy information in the footer.
 
-- `show_copyright_privacy_block_footer`: Set this to `true` to show the
-  copyright and privacy information block in the footer.
-- `copyright_url`: Set this to the URL for the copyright page. Defaults to
-  `/copyright.html`.
-- `privacy_url`: Set this to the URL for the privacy page. Defaults to
-  `/privacy.html`.
-
+- `show_copyright_privacy_block_footer`: Set to `True` to show the copyright and
+  privacy block in the footer.
+- `copyright_url`: URL for the copyright page. Defaults to an empty string.
+- `privacy_url`: URL for the privacy page. Defaults to an empty string.
+- `meta_footer`: A blurb of text to appear in the metadata footer section.

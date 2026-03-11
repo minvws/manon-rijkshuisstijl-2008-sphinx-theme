@@ -1,25 +1,42 @@
-# Rijkshuisstijl 2008 Sphinx Theme
+# Sphinx Rijkshuisstijl 2008 Theme
+
+A visually clean, responsive, and configurable theme for
+[Sphinx](https://www.sphinx-doc.org), built with the
+[Manon](https://github.com/minvws/nl-rdo-manon) design framework and following
+the Rijkshuisstijl 2008 guidelines.
 
 ## Features
 
-- Style tweaks compared to the source themes, such as better code-block
-  alignment, Github button placement, page source link moved to footer, improved
-  (optional) related-items sidebar item, and many more;
-- Many customization hooks, including toggle of various sidebar & footer
-  components; header/link/etc color control; etc;
-- Improved documentation for all customizations (pre-existing & new).
+- **Rijkshuisstijl 2008 Compliance**: Built with the Manon Rijkshuisstijl 2008
+  design system for a consistent look.
+- **Accessibility Focused**: High emphasis on accessibility, including semantic
+  HTML structure and ARIA labels.
+- **Enhanced Styling**: Custom-tailored styles for common Sphinx elements:
+  - **Admonitions**: Improved visual presentation for warnings, notes, and tips.
+  - **Code Blocks**: Better alignment and styling for highlighted code snippets.
+  - **Pagination**: Modernized "Previous" and "Next" navigation links.
+  - **Print-friendly**: Dedicated print styles to ensure documentation looks
+    good on paper.
+- **Configurable**: Easily toggle sidebar/footer components and customize logos,
+  slogans, and metadata via `html_theme_options`.
+- **Responsive**: Fully responsive layout that adapts to desktop, tablet, and
+  mobile devices.
 
 ## Implementation notes
 
-- Manon includes/requires a tiny Sphinx extension on top of the theme itself;
-  this is just so we can inject dynamic metadata into template contexts. It
-  doesn't add any additional directives or the like, at least not yet.
+- **Custom Translator**: The theme employs a custom Sphinx translator
+  (`CustomHTMLTranslator`) to optimize the rendering of specific elements, such
+  as wrapping admonition titles for improved styling.
+- **Alabaster Base**: It inherits from the Alabaster theme, leveraging its
+  stable core while providing a completely custom visual layer through SCSS.
+- **MyST-Parser Integration**: Designed to work seamlessly with the
+  [MyST-Parser](https://myst-parser.readthedocs.io/) for Markdown support.
 
 ```{toctree}
 :hidden:
 :maxdepth: 1
 
-customization.md
 installation.md
+customization.md
 manon.md
 ```
