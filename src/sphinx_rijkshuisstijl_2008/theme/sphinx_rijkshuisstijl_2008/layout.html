@@ -11,7 +11,7 @@
 {%- macro manon_sidebar() %}
   {%- block sidebartoc %}
     <nav aria-label="{{ _('Sidebar') }}">
-      <div class="sticky-container">{{ toctree(includehidden=True) }}</div>
+      <div class="sticky-container">{{ toc }}</div>
     </nav>
   {%- endblock %}
 {% endmacro %}
@@ -69,6 +69,7 @@
     <div class="collapsing-element content-wrapper">
       <ul>
         <li><a href="{{ theme_home_url }}"><i class="icon icon-home"></i>{{ _('Home') }}</a></li>
+        {{ toctree( maxdepth=1, collapse=False, titles_only=True, includehidden=True) }}
       </ul>
       <form
         name="header_search"

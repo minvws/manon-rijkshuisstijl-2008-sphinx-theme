@@ -2,7 +2,6 @@
 
 ## Features
 
-- Easy ability to use as a zip file.
 - Style tweaks compared to the source themes, such as better code-block
   alignment, Github button placement, page source link moved to footer, improved
   (optional) related-items sidebar item, and many more;
