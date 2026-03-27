@@ -1,3 +1,6 @@
+// Import the main SCSS file which includes all necessary styles from @minvws/mano
+import "../scss/index.scss";
+
 // Import all necessary JS modules from @minvws/manon
 import "@minvws/manon/js/accordion.js";
 import "@minvws/manon/js/collapsible.js";
