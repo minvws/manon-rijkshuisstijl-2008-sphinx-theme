@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -e
 
+npm ci
+
 # Run vite build --watch in the background to rebuild assets on change
 npm run dev &
 
