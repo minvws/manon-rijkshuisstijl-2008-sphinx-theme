@@ -1,4 +1,4 @@
-// Import the main SCSS file which includes all necessary styles from @minvws/mano
+// Import the main SCSS file which includes all necessary styles from @minvws/manon
 import "../scss/index.scss";
 
 // Import all necessary JS modules from @minvws/manon
