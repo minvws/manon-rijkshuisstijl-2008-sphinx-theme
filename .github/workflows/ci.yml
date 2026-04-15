@@ -6,6 +6,11 @@ on:
   pull_request:
   workflow_dispatch:
 
+# Ensure that only one workflow runs at a time for a given branc,
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   audit:
     name: Audit dependencies
