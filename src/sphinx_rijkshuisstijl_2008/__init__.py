@@ -13,6 +13,7 @@ def setup(app: Sphinx):
     theme_path = os.path.join(root_path, "theme/sphinx_rijkshuisstijl_2008")
 
     app.add_html_theme("sphinx_rijkshuisstijl_2008", theme_path)
+    app.add_js_file("js/theme.js", type="module")
     app.set_translator("html", CustomHTMLTranslator)
 
     return {"parallel_read_safe": True, "parallel_write_safe": True}
