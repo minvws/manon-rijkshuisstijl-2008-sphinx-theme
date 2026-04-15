@@ -38,6 +38,7 @@ sphinx_rijkshuisstijl_2008 = [
   "theme/sphinx_rijkshuisstijl_2008/theme.conf",
 
   # Static files
+  "theme/sphinx_rijkshuisstijl_2008/static/assets/**/*",
   "theme/sphinx_rijkshuisstijl_2008/static/css/*.css",
   "theme/sphinx_rijkshuisstijl_2008/static/js/*.js",
   "theme/sphinx_rijkshuisstijl_2008/static/fonts/**/*",
