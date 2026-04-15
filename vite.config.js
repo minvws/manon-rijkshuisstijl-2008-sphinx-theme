@@ -32,6 +32,7 @@ export default defineConfig({
       input: {
         theme: resolve(__dirname, "static/js/main.js"),
       },
+
       output: {
         entryFileNames: "js/[name].js",
         assetFileNames: "assets/[name][extname]",
@@ -42,6 +43,7 @@ export default defineConfig({
   // Copy static assets from both the theme and the Manon themes
   plugins: [
     viteStaticCopy({
+      silent: true,
       targets: [
         {
           src: "static/img/**/*.{png,jpg,jpeg,svg,gif,webp,ico}",
