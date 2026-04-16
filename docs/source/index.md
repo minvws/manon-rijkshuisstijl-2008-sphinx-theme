@@ -34,9 +34,7 @@ the Rijkshuisstijl 2008 guidelines.
 
 ```{toctree}
 :hidden:
-:maxdepth: 1
+:glob:
 
-installation.md
-customization.md
-manon.md
+guide/*
 ```
