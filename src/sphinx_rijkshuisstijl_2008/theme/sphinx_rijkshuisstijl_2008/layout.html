@@ -106,7 +106,9 @@
       <article>
         {% block document %}
           <div class="content-wrapper">
-            {{ body }}
+            {% block body %}
+              {{ body }}
+            {% endblock %}
           </div>
         {% endblock %}
 
